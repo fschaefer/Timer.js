@@ -26,10 +26,10 @@ hours, 20 minutes'`.
 
 Events can be bound to the timer with the `bind(when, callback)` method:
 
-    timer.bind(1000 * 3, function () {}); // fire event after 3 seconds
+    timer.bind(3, function () {}); // fire event after 3 ticks
 
-`when` can also be a string describing the moment on that the event should  be 
-fired:
+`when` can be an integer number of ticks or a string describing the moment that
+the event should be fired:
 
     timer.bind('3 seconds', function () {});
 
