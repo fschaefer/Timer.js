@@ -141,6 +141,7 @@
             Timer.prototype.unbind.call(self, fn);
             callback.apply(this, arguments);
         });
+        return this;
     };
 
     return Timer;
