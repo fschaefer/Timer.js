@@ -71,9 +71,10 @@
                 this._running = !this._running;
                 this._timer = setInterval(function loopsyloop() {
                     self._ticks++;
-                    for (var i = 0, l = self._notifications.length; i < l; i++) {
-                        if (self._notifications[i] && self._ticks % self._notifications[i].ticks === 0) {
-                            self._notifications[i].callback.call(self._notifications[i], { ticks: self._ticks, resolution: self._resolution });
+                    for (var i = 0, l = self._notifications.length, noti; i < l; i++) {
+                        noti = self._notifications[i];
+                        if (noti && self._ticks % noti.ticks === 0) {
+                            noti.callback.call(noti, { ticks: self._ticks, resolution: self._resolution });
                         }
                     }
                 }, this._resolution);
