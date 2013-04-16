@@ -62,6 +62,7 @@
         this._running = false;
         this._ticks = 0;
         this._timer = null;
+        this._drift = 0;
     }
 
     Timer.prototype = {
@@ -77,7 +78,8 @@
                         }
                     }
                     if (self._running) {
-                        self._timer = setTimeout(loopsyloop, self._resolution);
+                        self._timer = setTimeout(loopsyloop, self._resolution + self._drift);
+                        self._drift = 0;
                     }
                 }, this._resolution);
             }
@@ -130,8 +132,10 @@
                 }
             }
             return this;
+        },
+        drift: function (timeDrift) {
+            this._drift = timeDrift;
         }
-
     };
 
     Timer.prototype.every = Timer.prototype.bind;

@@ -65,6 +65,8 @@ automatically after the event is fired:
 
 `timer.running()` indicates if the timer is running.
 
+`timer.drift(driftAmount)` Adds `driftAmount` milliseconds to the next event call. This should allow rudimentary syncing between different clocks.
+
 ### Usage example
 
     var timer = new Timer('100 milliseconds');
