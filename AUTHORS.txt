@@ -3,3 +3,4 @@ Authors ordered by first contribution.
 Arthur Klepchukov <arthur.klepchukov@gmail.com>
 Jarvis Badgley <chipersoft@gmail.com>
 Florian Schäfer <florian.schaefer@gmail.com>
+Brian Hann <brian.hann@gmail.com
