@@ -70,7 +70,7 @@
             var self = this;
             if (!this._running) {
                 this._running = !this._running;
-                setTimeout(function loopsyloop() {
+                this._timer = setTimeout(function loopsyloop() {
                     self._ticks++;
                     for (var i = 0, l = self._notifications.length; i < l; i++) {
                         if (self._notifications[i] && self._ticks % self._notifications[i].ticks === 0) {
