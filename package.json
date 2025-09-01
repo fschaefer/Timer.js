@@ -22,5 +22,6 @@
     "contributors": [],
     "engine": "node >= 0.8.0",
     "main": "Timer.js",
-    "version": "0.0.1"
+    "version": "0.0.1",
+    "license": "BSD-3-Clause"
 }
